@@ -1,0 +1,14 @@
+import { Controller } from "@hotwired/stimulus"
+// BootstrapのToastをimport
+import { Toast } from "bootstrap"
+
+// Connects to data-controller="toast"
+export default class extends Controller {
+  connect() {
+    // Toastを生成
+    const toast = new Toast(this.element)
+    console.log(toast)
+    // Toastを表示
+    toast.show()
+  }
+}
